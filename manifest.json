@@ -2,7 +2,7 @@
     "name": "Digimon Card Collection",
     "short_name": "Digimon",
 
-    "start_url": "./",
+    "start_url": "./index.html",
 
     "display": "standalone",
 
