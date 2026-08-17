@@ -1,0 +1,54 @@
+.save-floating {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+.save-btn {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    background: #28a745;
+    color: white;
+    transition: .3s;
+}
+
+
+.save-btn.red {
+    background: #dc3545;
+}
+
+
+.save-btn:hover {
+    transform: scale(1.05);
+}
+
+
+.controls {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    margin:10px 0;
+}
+
+
+.controls button {
+    width:28px;
+    height:28px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#ddd;
+}
+
+
+.controls button:hover {
+    background:#bbb;
+}
+

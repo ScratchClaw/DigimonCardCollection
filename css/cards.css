@@ -1,0 +1,459 @@
+  #cardContainer .card {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.3s forwards;
+        }
+
+        
+        #cardContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+
+        .card {
+                    
+            border: 1px solid #eee;
+            box-sizing: border-box;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,.08);
+            position: relative;
+            padding: 5px;
+            margin: 10px;
+            width: 130px;
+            display: none;
+            vertical-align: top;
+            text-align: center;
+            background: #f8f9fa;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+
+
+        .card.owned {            
+            border-color: #28a745;
+            box-shadow: 0 0 12px rgba(40,167,69,.35);
+            background: linear-gradient(180deg, #f5fff7, #ffffff);
+        }
+
+
+        .card:not(.owned) {
+
+            opacity:.88;
+        }
+
+
+        .card.active{
+        z-index: 10;
+
+        }
+
+        
+        .card:active {
+            transform: scale(0.97);
+        }
+
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,.15);
+        }
+
+
+        .card.owned:hover {
+            box-shadow: 0 0 12px #28a745;
+        }
+
+
+        .card img {            
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+
+
+        .card h3 {
+            font-size: 13px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+
+       .card p {
+            font-size: 11px;
+            color: #666;
+        }
+
+
+        .owned {
+            border-color: #28a745;
+            background-color: #e8f5e9;
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+        }
+
+
+        .variants-title {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+        }
+
+
+        .variants-panel {
+            position: absolute;
+            top: 0;
+            left: 100%;
+
+            background: white;
+            padding: 10px;
+
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+              
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+
+            width: 160px;
+
+            height: auto;
+            overflow-y: auto;
+
+            opacity: 0;
+            pointer-events: none;
+
+            transform: translateX(10px);
+            transition: 0.25s ease;
+            z-index: 20;
+        }
+
+        .card.active .variants-panel {
+
+    display: flex;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+        .variants-panel.left-side {
+            left: auto;
+            right: 100%;
+            transform: translateX(-10px);
+        }
+
+
+        .card.active .variants-panel {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0);
+        }
+
+
+        .variant-item {
+            text-align: center;
+
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            padding: 4px;
+        }
+
+        
+        .variant-item input {
+            border-color: #999;
+        }
+
+
+        .variant-item:hover {
+            border: 1px solid #28a745;
+            transform: scale(1.03);
+        }
+
+
+        .variant-item .controls button {
+            width: 28px;
+            height: 28px;
+            font-size: 16px;
+        }
+        
+
+        .variant-item .controls input {
+            width: 38px;
+            height: 28px;
+            font-size: 14px;
+        }
+
+
+        .variant-badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;            
+            color: white;            
+            padding: 3px 6px;
+            border-radius: 5px;            
+            background: linear-gradient(45deg, #6c757d, #343a40);
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+
+
+        .controls {
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            align-items: center;
+        }
+
+
+        .controls button {
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: none;
+            background: #ddd;
+            cursor: pointer;
+        }
+
+
+        .controls button:hover {
+            background: #bbb;
+        }
+
+
+        .controls input {
+            width: 45px;
+            height: 35px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+        .base-count{
+            margin-top:-5px;
+            font-size:12px;
+            color:#666;
+            font-weight:600;
+            height: 18px;
+        }
+
+
+        .card-total {
+            display: inline-block;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            padding: 4px 10px;
+            margin-left: 5px;
+
+            background: #e9ecef;     /* cinza suave */
+            color: #333;             /* texto escuro */
+
+            border-radius: 10px;
+
+            transition: 0.2s ease;
+        }
+
+
+        .card-total.has-value {
+            background: #e6f4ea;  /* verde muito leve */
+            color: #2e7d32;
+        }
+
+
+        .card-total:empty,
+        .card-total[data-zero="true"] {
+            background: #ccc;
+        }
+
+
+        .variant-count {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+
+            margin: 6px auto;
+
+            padding: 5px 12px;
+            
+            border-radius: 20px;
+
+            background: #e9ecef;
+            color: #666;
+
+            width: fit-content;
+
+            font-size: 12px;
+            font-weight: bold;
+            transition: .3s ease;
+            
+        }
+
+
+        .variant-count.empty {
+
+           visibility:hidden;
+          
+        }
+
+
+        .variant-icon {
+            font-size: 10px;
+            position: relative;
+            top: -1px;
+            color: #ffd700;
+        }
+
+
+        .variant-count.owned-variant {
+            background: linear-gradient(
+                45deg,
+                #527DF3,
+                #7E57C2
+            );
+
+            color: white;
+
+            box-shadow: 
+                        0 0 8px rgba(82,125,243,.4), 
+                        0 0 14px rgba(82,125,243,.4);;
+            
+        }
+
+        .variant-count.complete-variant {
+
+            background: linear-gradient(
+                45deg,
+                #FFD700,
+                #FFB300
+            );
+
+            color:#333;
+
+            box-shadow:
+                0 0 8px rgba(255,215,0,.6),
+                0 0 15px rgba(255,215,0,.4),
+                0 0 12px rgba(126,87,194,.25);
+
+        }
+
+        .complete-variant .variant-icon{
+            color:white;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff;
+        }
+
+
+        .card-click-area {
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

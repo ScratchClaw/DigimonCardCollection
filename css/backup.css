@@ -1,0 +1,170 @@
+html, body{
+    margin:0;
+    min-height:100%;
+
+    font-family:'Open Sans', Arial, sans-serif;
+
+    background:#eef2f7;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #eef2f7,
+            #dfe6ee
+        );
+
+    background-attachment: fixed;
+}
+
+.backup-container{
+
+
+    
+    max-width:700px;
+
+    margin:40px auto;
+
+    padding:20px;
+}
+
+.backup-container h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+}
+
+.backup-description{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+}
+
+.backup-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.12);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.back-btn{
+
+    display:inline-block;
+    padding:10px 16px;
+    margin-bottom:20px;
+    border-radius:10px;
+    text-decoration:none;
+    background:white;
+    color:#333;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+    font-weight:600;
+    transition:.2s;
+    
+    
+    
+}
+
+.backup-btn{
+
+    display:block;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:#527DF3;
+
+    transition:.25s;
+}
+
+.backup-btn:hover{
+
+    transform:translateY(-2px);
+}
+
+.import-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.import-form button{
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background:#28a745;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.import-form button:hover{
+
+    background:#218838;
+}
+
+.backup-warning{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:#fff3cd;
+
+    color:#856404;
+
+    border:1px solid #ffeeba;
+}
+
+
+h1{
+    text-align:center;
+}
+
+
+.import-form input[type="file"]{
+
+    padding:10px;
+
+    border:1px solid #d0d7de;
+
+    border-radius:10px;
+
+    background:white;
+}

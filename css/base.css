@@ -1,0 +1,57 @@
+        body {
+            font-family: 'Open Sans', helvetica, Arial, sans-serif;
+            background: #eef2f7;        
+            background: linear-gradient(to bottom, #eef2f7, #dfe6ee);    
+            max-width: 90%;
+            margin: auto;
+        }
+        
+
+        .hidden {
+            display: none !important;
+        }
+
+
+        input[type=number] {
+            width: 50px;
+            text-align: center;
+        }
+
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

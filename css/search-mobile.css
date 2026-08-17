@@ -1,0 +1,142 @@
+@media (max-width:768px){
+
+    body{
+        max-width:100%;
+        margin:0;
+        padding:10px;
+        box-sizing:border-box;
+    }
+
+    .search-title{
+        font-size:28px;
+    }
+
+    .search-subtitle{
+        font-size:14px;
+    }
+
+}
+
+/*FILTROS*/
+
+@media (max-width:768px){
+
+    .search-filters{
+
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+
+        gap:8px;
+    }
+
+    .filter-pill{
+
+        width:auto;
+        min-width:90px;
+
+        font-size:12px;
+
+        padding:8px;
+    }
+
+}
+
+/*CARDS*/
+
+@media (max-width:768px){
+
+    .search-results{
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:10px;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .search-card{
+
+        width:auto;
+        min-width:0;
+        padding:10px;
+        box-sizing:border-box;
+    }
+
+}
+
+
+
+/*IMAGEM*/
+
+@media (max-width:768px){
+
+    .card-image{
+
+        width:100px;
+
+        height:auto;
+    }
+
+}
+
+/*BOTAO GUARDAR*/
+
+@media(max-width:768px){
+
+    .save-btn{
+
+        width:50px;
+        height:50px;
+    }
+
+}
+
+
+/*MODAL*/
+
+@media(max-width:768px){
+
+    #imageModal{
+
+        display:none;
+
+        justify-content:center;
+        align-items:center;
+
+        overflow:hidden;
+    }
+
+    #imageModalContent{
+
+        max-width:90vw;
+        max-height:90vh;
+
+        margin:0;
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .search-filters{
+
+        flex-wrap:wrap;
+
+    }
+
+    body,
+    html{
+
+        overflow-x:hidden;
+
+    }
+
+}

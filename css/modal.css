@@ -1,0 +1,46 @@
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: rgba(0,0,0,0.8);
+}
+
+#imageModalContent {
+
+    display: block;
+
+    width: auto;
+
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    border: 4px solid white;
+    border-radius: 12px;
+
+    image-rendering: auto;
+    object-fit: contain;
+}
+
+
+        #closeModal {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
